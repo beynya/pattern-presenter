@@ -7,6 +7,7 @@ var dir = require('node-dir'),
   createPatternObjectPromise = Promise.promisifyAll(createPatternObject),
   PLUGIN_NAME = 'pattern-importer';
 
+function createCompiledPatternsObject () {
   // createPatternObjectPromise('../../app/_patterns')
   //   .then(function(resp){
   //     console.log('1stthen');
@@ -16,10 +17,16 @@ var dir = require('node-dir'),
   //     console.log('2ndthen');
   //     return filesTree;
   //   })
-createPatternObject('../../app/_patterns', function (err, filesTree){
-  if (err) throw err;
+  createPatternObject('../../app/_patterns', function (err, filesTree){
+    if (err) throw err;
 
-  //@TODO: generate menu tree using filesTree
-  // object: filesTree contains a deep object of our pattern's names/urls
-});
+    //@TODO: generate menu tree using filesTree
+    // object: filesTree contains a deep object of our pattern's names/urls
+  });
 
+}
+
+module.exports = {
+  createCompiledPatternsObject: createCompiledPatternsObject,
+  gulpWatchPatterns: require('./gulp/watch-patterns')
+}

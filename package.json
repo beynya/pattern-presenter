@@ -6,7 +6,9 @@
   "scripts": {
     "test": "./lib/main.js"
   },
-  "author": "scottnath",
+  "author": {
+    "name": "scottnath"
+  },
   "license": "MIT",
   "devDependencies": {
     "chai": "^2.2.0",
@@ -16,9 +18,11 @@
   },
   "dependencies": {
     "bluebird": "^2.9.24",
+    "gulp-print": "^1.1.0",
     "gulp-util": "^3.0.4",
+    "gulp-watch": "^4.2.4",
     "js-yaml": "^3.2.7",
-    "node-dir": "^0.1.6",
-    "readdirp": "^1.3.0"
+    "lodash.merge": "^3.2.1",
+    "node-dir": "^0.1.6"
   }
 }
